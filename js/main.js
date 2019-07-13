@@ -755,8 +755,6 @@ function init() {
             return p.type == 3
         })
 
-        console.log(predators);
-
         let preys = Array.prototype.filter.call(donuts, (p) => {
             return p.type != 3
         })
@@ -885,6 +883,6 @@ function init() {
     }
 
     function tweet() {
-        window.open().location.href = ("https://twitter.com/share?url=https://wowowo142.github.io/ahoge29/" + url + "&text=" + encodeURIComponent(resultLabel.text.replace("\r\n",'') + ' #ahoge') + "&count=none&lang=ja");
+        window.open().location.href = ("https://twitter.com/share?url=https://wowowo142.github.io/ahoge29/" + "&text=" + encodeURIComponent(resultLabel.text.replace("\r\n",'') + ' #ahoge') + "&count=none&lang=ja");
     }
 }
