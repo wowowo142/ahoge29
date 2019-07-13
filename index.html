@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />    
+    <title>ドナの惑星</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.0.1/pixi.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/PixiPlugin.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>ドナの惑星</h1>
+        <div>操作 : クリックとドラッグ(箱に入れるか犬に喰わす)</div>
+        <div id="game">
+        </div>
+        <div id="shoukai">
+            <p>会社の経営に穴をあけたあなたは無人の星に左遷されました</p>
+            <p>この星特有の生物資源🍩を売りさばき、会社からの信用を取り戻しましょう</p>
+            <ul id="setsumei">
+                <li><img class="setsumei-img" src="./res/img/donu_plain.png"> オールドファッション 安い</li>
+                <li><img class="setsumei-img" src="./res/img/donu_green.png"> クロレラ 光合成</li>
+                <li><img class="setsumei-img" src="./res/img/donu_toxic.png"> ベノム 息が荒い</li>
+                <li><img class="setsumei-img" src="./res/img/donu_predator.png"> プレデター 種のアポトーシス</li>
+                <li><img class="setsumei-img" src="./res/img/dog.png"> ドッグ なんでも食う 足元を見る</li>
+            </ul>
+        </div>
+    </div>
+    <!-- <script type="module" src="./js/main.js"></script> -->
+    <script src="./js/bundle.js"></script>
+</body>
+
+</html>

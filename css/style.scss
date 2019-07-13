@@ -1,0 +1,47 @@
+$MIN_WIDTH: 414px;
+$_MIN_WIDTH: 415px;
+
+html,body {
+    @media ( min-width: $_MIN_WIDTH ) {
+        font-size: 16px;
+    }
+    @media ( max-width: $MIN_WIDTH) {
+        font-size: 11px;
+    }
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 5px 0 ;
+    }
+    #game {
+    }
+
+    #shoukai {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            margin: 0.1rem 0;
+        }
+
+        #setsumei {
+            margin-left: 0;
+            list-style-type: none;
+            li {
+                margin-left: 0;
+                list-style: none;
+                .setsumei-img {
+                    width: 30px;
+                    height: auto;
+                }
+            }
+        }
+        
+    }
+}
