@@ -3,7 +3,7 @@
  * 何も考えずこれにすべてを書く
  */
 
-
+import '@babel/polyfill';
 
 let w = 800
 let h = 600
@@ -884,7 +884,7 @@ function init() {
         return String(num).replace( /(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
     }
 
-    function tweet(url,text) {
-        window.open().location.href = ("https://twitter.com/share?url=" + url + "&text=" + encodeURIComponent(resultLabel.text.replace("\r\n",'') + ' #ahoge') + "&count=none&lang=ja");
+    function tweet() {
+        window.open().location.href = ("https://twitter.com/share?url=https://wowowo142.github.io/ahoge29/" + url + "&text=" + encodeURIComponent(resultLabel.text.replace("\r\n",'') + ' #ahoge') + "&count=none&lang=ja");
     }
 }
