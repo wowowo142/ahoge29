@@ -437,9 +437,15 @@ function init() {
         if (80 < gp.x && gp.x < 140 && 540 < gp.y && gp.y < 580) {
             feedDog(d);
         }
+        console.log(gp)
         Array.prototype.forEach.call(boxContainerList,(b) => {
             let bx = b.worldTransform.tx
             let by = b.worldTransform.ty
+            if (isSP) {
+                bx *= (1 / spScale)
+                by *= (1 / spScale)
+            }
+            console.log(b.worldTransform)
             if (bx < gp.x && gp.x < bx+120 && by < gp.y && gp.y < by+70) {
                 checkOrder(b,d)
             }
