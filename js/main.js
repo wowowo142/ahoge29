@@ -437,7 +437,6 @@ function init() {
         if (80 < gp.x && gp.x < 140 && 540 < gp.y && gp.y < 580) {
             feedDog(d);
         }
-        console.log(gp)
         Array.prototype.forEach.call(boxContainerList,(b) => {
             let bx = b.worldTransform.tx
             let by = b.worldTransform.ty
@@ -445,7 +444,6 @@ function init() {
                 bx *= (1 / spScale)
                 by *= (1 / spScale)
             }
-            console.log(b.worldTransform)
             if (bx < gp.x && gp.x < bx+120 && by < gp.y && gp.y < by+70) {
                 checkOrder(b,d)
             }
@@ -615,15 +613,15 @@ function init() {
                     break
                 case 1:
                     payment += 20000
-                    bonus *= 3.0
+                    bonus *= 2.5
                     break
                 case 2:
                     payment += 100000
                     bonus *= 0.9
                     break
                 case 3:
-                    payment += 300000
-                    bonus *= 1.5
+                    payment += 250000
+                    bonus *= 1.4
                     break
                 default: 
                     break
@@ -840,7 +838,7 @@ function init() {
         app.stage.addChild(resultLabel); 
         if (clear) {
             gameOverLabel.text = 'ゲームクリア！'
-            resultLabel.text = '左遷から ' + (time+1) + ' 日後に地球へ帰還した。\r\nこれからもお仕事頑張ろう！'
+            resultLabel.text = '左遷から ' + time + ' 日後に地球へ帰還した。\r\nこれからもお仕事頑張ろう！'
             let gameclearScreen = new PIXI.Graphics()
             .beginFill(0xffffff)
             .drawRect(0, 0, 800, 600)
@@ -852,7 +850,7 @@ function init() {
         }
         else {
             gameOverLabel.text = 'ゲームオーバー...'
-            resultLabel.text = '左遷から ' + resTime + ' 日目に酸欠で倒れた。\r\n退職してうきうきニート生活！'
+            resultLabel.text = '左遷から ' + time + ' 日目に酸欠で倒れた。\r\n退職してうきうきニート生活！'
             let gameclearScreen = new PIXI.Graphics()
             .beginFill(0x000000)
             .drawRect(0, 0, 800, 600)
